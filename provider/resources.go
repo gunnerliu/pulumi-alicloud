@@ -128,6 +128,7 @@ const (
 	openSearchMod          = "OpenSearch"
 	ossMod                 = "Oss"
 	otsMod                 = "Ots"
+	oceanMod               = "Ocean"
 	polarDbMod             = "PolarDB"
 	privateLinkMod         = "PrivateLink"
 	pvtzMod                = "Pvtz"
@@ -253,7 +254,7 @@ var mappedMods = map[string]string{
 	"mse":                   mseMod,
 	"nas":                   nasMod,
 	"nlb":                   nlbMod,
-	"ocean":                 "Ocean",
+	"ocean":                 oceanMod,
 	"ons":                   rocketMqMod,
 	"oos":                   oosMod,
 	"open_search":           openSearchMod,
@@ -1171,6 +1172,9 @@ func Provider() tfbridge.ProviderInfo {
 			"alicloud_ots_secondary_index":     {Tok: resource(otsMod, "SecondaryIndex")},
 			"alicloud_ots_table":               {Tok: resource(otsMod, "Table")},
 			"alicloud_ots_tunnel":              {Tok: resource(otsMod, "Tunnel")},
+
+			"alicloud_ocean_base_instance": {Tok: resource(oceanMod, "BaseInstance")},
+			"alicloud_ocean_tenant":        {Tok: resource(oceanMod, "Tenant")},
 
 			// PrivateLink
 			"alicloud_privatelink_vpc_endpoint":         {Tok: resource(privateLinkMod, "VpcEndpoint")},

@@ -1,7 +1,15 @@
+import * as pulumi from "@pulumi/pulumi";
 import * as alicloud from "@pulumi/alicloud";
 
-const vpc = new alicloud.vpc.Network("my-ts-vpc", {
-    cidrBlock: "10.0.0.0/16",
-});
-
-export const vpcId = vpc.id;
+const cbcTestTenant = new alicloud.ocean.Tenant("cbcTestTenant", {
+    tenantName: "cbcTestTenant",
+    cpu: 1,
+    memory: 1,
+    timeZone: "Asia/Shanghai",
+    tenantMode: "MySQL",
+    charset: "utf8mb4",
+    instanceId: "ob5jdb0b3t68tc",
+    userVpcId: "vpc-bp1wthpj1estmaf84tu1b",
+    userVSwitchId: "vsw-bp1mthjmn4gneuvz5qwdz",
+    primaryZone: "cn-hangzhou-j"
+})

@@ -15,6 +15,11 @@ export const getBaseInstances: typeof import("./getBaseInstances").getBaseInstan
 export const getBaseInstancesOutput: typeof import("./getBaseInstances").getBaseInstancesOutput = null as any;
 utilities.lazyLoad(exports, ["getBaseInstances","getBaseInstancesOutput"], () => require("./getBaseInstances"));
 
+export { TenantArgs, TenantState } from "./tenant";
+export type Tenant = import("./tenant").Tenant;
+export const Tenant: typeof import("./tenant").Tenant = null as any;
+utilities.lazyLoad(exports, ["Tenant"], () => require("./tenant"));
+
 
 const _module = {
     version: utilities.getVersion(),
@@ -22,9 +27,12 @@ const _module = {
         switch (type) {
             case "alicloud:ocean/baseInstance:BaseInstance":
                 return new BaseInstance(name, <any>undefined, { urn })
+            case "alicloud:ocean/tenant:Tenant":
+                return new Tenant(name, <any>undefined, { urn })
             default:
                 throw new Error(`unknown resource type ${type}`);
         }
     },
 };
 pulumi.runtime.registerResourceModule("alicloud", "ocean/baseInstance", _module)
+pulumi.runtime.registerResourceModule("alicloud", "ocean/tenant", _module)

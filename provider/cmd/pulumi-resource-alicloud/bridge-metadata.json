@@ -5204,6 +5204,9 @@
                     }
                 }
             },
+            "alicloud_ocean_tenant": {
+              "current": "alicloud:ocean/tenant:Tenant"
+            },
             "alicloud_ons_group": {
                 "current": "alicloud:rocketmq/group:Group"
             },
@@ -19606,6 +19609,7 @@
             "alicloud:nlb/serverGroup:ServerGroup": "alicloud_nlb_server_group",
             "alicloud:nlb/serverGroupServerAttachment:ServerGroupServerAttachment": "alicloud_nlb_server_group_server_attachment",
             "alicloud:ocean/baseInstance:BaseInstance": "alicloud_ocean_base_instance",
+            "alicloud:ocean/tenant:Tenant": "alicloud_ocean_tenant",
             "alicloud:oos/application:Application": "alicloud_oos_application",
             "alicloud:oos/applicationGroup:ApplicationGroup": "alicloud_oos_application_group",
             "alicloud:oos/defaultPatchBaseline:DefaultPatchBaseline": "alicloud_oos_default_patch_baseline",
@@ -36661,6 +36665,18 @@
                 "paymentType": "payment_type",
                 "periodUnit": "period_unit",
                 "resourceGroupId": "resource_group_id"
+            },
+            "alicloud:ocean/tenant:Tenant": {
+              "tenantName": "tenant_name",
+              "timeZone": "time_zone",
+              "tenantMode": "tenant_mode",
+              "instanceId": "instance_id",
+              "userVpcId": "user_vpc_id",
+              "userVSwitchId": "user_v_switch_id",
+              "primaryZone": "primary_zone",
+              "unitNum": "unit_num",
+              "readOnlyZoneList": "read_only_zone_list",
+              "logDisk": "log_disk"
             },
             "alicloud:ocean/getBaseInstances:getBaseInstances": {
                 "enableDetails": "enable_details",
