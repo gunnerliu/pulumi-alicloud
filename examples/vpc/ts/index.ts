@@ -13,3 +13,10 @@ const cbcTestTenant = new alicloud.ocean.Tenant("cbcTestTenant", {
     userVSwitchId: "vsw-bp1mthjmn4gneuvz5qwdz",
     primaryZone: "cn-hangzhou-j"
 })
+
+// const ids = alicloud.ocean.getBaseInstances({});
+// export const oceanBaseInstanceId1 = ids.then(ids => ids.instances?.[0]?.id);
+// const nameRegex = alicloud.ocean.getBaseInstances({
+//
+// });
+// export const oceanBaseInstanceId2 = nameRegex.then(nameRegex => nameRegex.instances?.[0]?.id);

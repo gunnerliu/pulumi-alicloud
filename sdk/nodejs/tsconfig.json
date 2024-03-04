@@ -1139,6 +1139,7 @@
         "ocean/baseInstance.ts",
         "ocean/getBaseInstances.ts",
         "ocean/index.ts",
+        "ocean/tenant.ts",
         "oos/application.ts",
         "oos/applicationGroup.ts",
         "oos/defaultPatchBaseline.ts",

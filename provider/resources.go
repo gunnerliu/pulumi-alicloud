@@ -23,7 +23,7 @@ import (
 	// embed is used to store bridge-metadata.json in the compiled binary
 	_ "embed"
 
-	"github.com/aliyun/terraform-provider-alicloud/alicloud"
+	"github.com/gunnerliu/terraform-provider-alicloud/alicloud"
 	"github.com/hashicorp/terraform-plugin-sdk/helper/schema"
 
 	"github.com/pulumi/pulumi-terraform-bridge/v3/pkg/tfbridge"
@@ -128,7 +128,6 @@ const (
 	openSearchMod          = "OpenSearch"
 	ossMod                 = "Oss"
 	otsMod                 = "Ots"
-	oceanMod               = "Ocean"
 	polarDbMod             = "PolarDB"
 	privateLinkMod         = "PrivateLink"
 	pvtzMod                = "Pvtz"
@@ -254,7 +253,7 @@ var mappedMods = map[string]string{
 	"mse":                   mseMod,
 	"nas":                   nasMod,
 	"nlb":                   nlbMod,
-	"ocean":                 oceanMod,
+	"ocean":                 "Ocean",
 	"ons":                   rocketMqMod,
 	"oos":                   oosMod,
 	"open_search":           openSearchMod,
@@ -345,7 +344,7 @@ func Provider() tfbridge.ProviderInfo {
 		Keywords:     []string{"pulumi", "alicloud"},
 		Homepage:     "https://pulumi.io",
 		License:      "Apache-2.0",
-		GitHubOrg:    "aliyun",
+		GitHubOrg:    "gunnerliu",
 		Repository:   "https://github.com/pulumi/pulumi-alicloud",
 		MetadataInfo: tfbridge.NewProviderMetadata(metadata),
 		Config: map[string]*tfbridge.SchemaInfo{
@@ -1172,9 +1171,6 @@ func Provider() tfbridge.ProviderInfo {
 			"alicloud_ots_secondary_index":     {Tok: resource(otsMod, "SecondaryIndex")},
 			"alicloud_ots_table":               {Tok: resource(otsMod, "Table")},
 			"alicloud_ots_tunnel":              {Tok: resource(otsMod, "Tunnel")},
-
-			"alicloud_ocean_base_instance": {Tok: resource(oceanMod, "BaseInstance")},
-			"alicloud_ocean_tenant":        {Tok: resource(oceanMod, "Tenant")},
 
 			// PrivateLink
 			"alicloud_privatelink_vpc_endpoint":         {Tok: resource(privateLinkMod, "VpcEndpoint")},

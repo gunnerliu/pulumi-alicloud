@@ -1,6 +1,6 @@
 {
     "name": "@pulumi/alicloud",
-    "version": "3.49.1",
+    "version": "${VERSION}",
     "description": "A Pulumi package for creating and managing AliCloud resources.",
     "keywords": [
         "pulumi",

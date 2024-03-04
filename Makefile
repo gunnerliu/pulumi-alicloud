@@ -15,6 +15,8 @@ PULUMI_CONVERT := 0
 
 development: install_plugins provider build_sdks install_sdks
 
+nodejs_node_dev: cleanup install_nodejs_sdk provider build_nodejs  install_nodejs_sdk
+
 build: install_plugins provider build_sdks install_sdks
 
 build_sdks: build_nodejs build_python build_go build_dotnet build_java
