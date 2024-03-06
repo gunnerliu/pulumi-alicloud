@@ -80,7 +80,7 @@ clean:
 	rm -rf sdk/{dotnet,nodejs,go,python}
 
 cleanup:
-	rm -r $(WORKING_DIR)/bin
+	rm -rf $(WORKING_DIR)/bin
 	rm -f provider/cmd/$(PROVIDER)/schema.go
 
 help:
@@ -155,8 +155,8 @@ ci-mgmt: .ci-mgmt.yaml
 		--template bridged-provider \
 		--config $<
 
-.pulumi/bin/pulumi: .pulumi/version
-	curl -fsSL https://get.pulumi.com | HOME=$(WORKING_DIR) sh -s -- --version $(shell cat .pulumi/version)
+#.pulumi/bin/pulumi: .pulumi/version
+#	curl -fsSL https://get.pulumi.com | HOME=$(WORKING_DIR) sh -s -- --version $(shell cat .pulumi/version)
 
 # Compute the version of Pulumi to use by inspecting the Go dependencies of the provider.
 .pulumi/version: provider/go.mod

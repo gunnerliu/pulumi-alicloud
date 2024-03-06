@@ -1,3 +1,21 @@
+# 开发环境搭建 
+- 安装依赖
+```shell
+brew install node python@3 typescript yarn go@1.21 golangci/tap/golangci-lint gofumpt pulumi/tap/pulumictl coreutils jq
+curl https://raw.githubusercontent.com/Homebrew/homebrew-cask/339862f79e/Casks/dotnet-sdk.rb > dotnet-sdk.rb
+brew install --HEAD -s dotnet-sdk.rb
+rm dotnet-sdk.rb
+```
+- 依赖本地 terraform-provider-alicloud 代码
+  - 在 provider/go.mod 的  replace 中定义 replace github.com/gunnerliu/terraform-provider-alicloud => "本地代码位置"
+- 单独编译 nodejs 环境: make nodejs_node_dev
+- link nodejs 依赖
+  - cd sdk/nodejs/bin
+  - yarn link
+  - cd examples/vpc/ts/
+  - yarn link @pulumi/alicloud
+
+
 [![Actions Status](https://github.com/pulumi/pulumi-alicloud/workflows/master/badge.svg)](https://github.com/pulumi/pulumi-alicloud/actions)
 [![Slack](http://www.pulumi.com/images/docs/badges/slack.svg)](https://slack.pulumi.com)
 [![NPM version](https://badge.fury.io/js/%40pulumi%2Falicloud.svg)](https://www.npmjs.com/package/@pulumi/alicloud)

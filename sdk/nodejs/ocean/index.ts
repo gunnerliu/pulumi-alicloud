@@ -10,6 +10,11 @@ export type BaseInstance = import("./baseInstance").BaseInstance;
 export const BaseInstance: typeof import("./baseInstance").BaseInstance = null as any;
 utilities.lazyLoad(exports, ["BaseInstance"], () => require("./baseInstance"));
 
+export { DatabaseArgs, DatabaseState } from "./database";
+export type Database = import("./database").Database;
+export const Database: typeof import("./database").Database = null as any;
+utilities.lazyLoad(exports, ["Database"], () => require("./database"));
+
 export { GetBaseInstancesArgs, GetBaseInstancesResult, GetBaseInstancesOutputArgs } from "./getBaseInstances";
 export const getBaseInstances: typeof import("./getBaseInstances").getBaseInstances = null as any;
 export const getBaseInstancesOutput: typeof import("./getBaseInstances").getBaseInstancesOutput = null as any;
@@ -20,6 +25,11 @@ export type Tenant = import("./tenant").Tenant;
 export const Tenant: typeof import("./tenant").Tenant = null as any;
 utilities.lazyLoad(exports, ["Tenant"], () => require("./tenant"));
 
+export { TenantUserArgs, TenantUserState } from "./tenantUser";
+export type TenantUser = import("./tenantUser").TenantUser;
+export const TenantUser: typeof import("./tenantUser").TenantUser = null as any;
+utilities.lazyLoad(exports, ["TenantUser"], () => require("./tenantUser"));
+
 
 const _module = {
     version: utilities.getVersion(),
@@ -27,12 +37,18 @@ const _module = {
         switch (type) {
             case "alicloud:ocean/baseInstance:BaseInstance":
                 return new BaseInstance(name, <any>undefined, { urn })
+            case "alicloud:ocean/database:Database":
+                return new Database(name, <any>undefined, { urn })
             case "alicloud:ocean/tenant:Tenant":
                 return new Tenant(name, <any>undefined, { urn })
+            case "alicloud:ocean/tenantUser:TenantUser":
+                return new TenantUser(name, <any>undefined, { urn })
             default:
                 throw new Error(`unknown resource type ${type}`);
         }
     },
 };
 pulumi.runtime.registerResourceModule("alicloud", "ocean/baseInstance", _module)
+pulumi.runtime.registerResourceModule("alicloud", "ocean/database", _module)
 pulumi.runtime.registerResourceModule("alicloud", "ocean/tenant", _module)
+pulumi.runtime.registerResourceModule("alicloud", "ocean/tenantUser", _module)

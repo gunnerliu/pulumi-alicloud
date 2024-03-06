@@ -7,4 +7,5 @@ import typing
 # Export this package's modules as members:
 from .base_instance import *
 from .get_base_instances import *
+from .tenant import *
 from . import outputs

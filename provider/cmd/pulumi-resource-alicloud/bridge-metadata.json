@@ -5204,8 +5204,14 @@
                     }
                 }
             },
+            "alicloud_ocean_database": {
+                "current": "alicloud:ocean/database:Database"
+            },
             "alicloud_ocean_tenant": {
                 "current": "alicloud:ocean/tenant:Tenant"
+            },
+            "alicloud_ocean_tenant_user": {
+                "current": "alicloud:ocean/tenantUser:TenantUser"
             },
             "alicloud_ons_group": {
                 "current": "alicloud:rocketmq/group:Group"
@@ -19609,7 +19615,9 @@
             "alicloud:nlb/serverGroup:ServerGroup": "alicloud_nlb_server_group",
             "alicloud:nlb/serverGroupServerAttachment:ServerGroupServerAttachment": "alicloud_nlb_server_group_server_attachment",
             "alicloud:ocean/baseInstance:BaseInstance": "alicloud_ocean_base_instance",
+            "alicloud:ocean/database:Database": "alicloud_ocean_database",
             "alicloud:ocean/tenant:Tenant": "alicloud_ocean_tenant",
+            "alicloud:ocean/tenantUser:TenantUser": "alicloud_ocean_tenant_user",
             "alicloud:oos/application:Application": "alicloud_oos_application",
             "alicloud:oos/applicationGroup:ApplicationGroup": "alicloud_oos_application_group",
             "alicloud:oos/defaultPatchBaseline:DefaultPatchBaseline": "alicloud_oos_default_patch_baseline",
@@ -36666,6 +36674,11 @@
                 "periodUnit": "period_unit",
                 "resourceGroupId": "resource_group_id"
             },
+            "alicloud:ocean/database:Database": {
+                "databaseName": "database_name",
+                "instanceId": "instance_id",
+                "tenantId": "tenant_id"
+            },
             "alicloud:ocean/getBaseInstances:getBaseInstances": {
                 "enableDetails": "enable_details",
                 "instanceId": "instance_id",
@@ -36699,6 +36712,14 @@
                 "unitNum": "unit_num",
                 "userVSwitchId": "user_v_switch_id",
                 "userVpcId": "user_vpc_id"
+            },
+            "alicloud:ocean/tenantUser:TenantUser": {
+                "encryptionType": "encryption_type",
+                "instanceId": "instance_id",
+                "tenantId": "tenant_id",
+                "userName": "user_name",
+                "userPassword": "user_password",
+                "userType": "user_type"
             },
             "alicloud:oos/application:Application": {
                 "applicationName": "application_name",

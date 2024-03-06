@@ -23,6 +23,8 @@ func (m *module) Construct(ctx *pulumi.Context, name, typ, urn string) (r pulumi
 	switch typ {
 	case "alicloud:ocean/baseInstance:BaseInstance":
 		r = &BaseInstance{}
+	case "alicloud:ocean/tenant:Tenant":
+		r = &Tenant{}
 	default:
 		return nil, fmt.Errorf("unknown resource type: %s", typ)
 	}
@@ -39,6 +41,11 @@ func init() {
 	pulumi.RegisterResourceModule(
 		"alicloud",
 		"ocean/baseInstance",
+		&module{version},
+	)
+	pulumi.RegisterResourceModule(
+		"alicloud",
+		"ocean/tenant",
 		&module{version},
 	)
 }

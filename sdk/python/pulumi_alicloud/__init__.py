@@ -4875,6 +4875,14 @@ _utilities.register(
  },
  {
   "pkg": "alicloud",
+  "mod": "ocean/tenant",
+  "fqn": "pulumi_alicloud.ocean",
+  "classes": {
+   "alicloud:ocean/tenant:Tenant": "Tenant"
+  }
+ },
+ {
+  "pkg": "alicloud",
   "mod": "oos/application",
   "fqn": "pulumi_alicloud.oos",
   "classes": {

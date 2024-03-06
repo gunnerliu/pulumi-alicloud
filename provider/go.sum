@@ -1239,8 +1239,8 @@ github.com/grpc-ecosystem/grpc-gateway/v2 v2.7.0/go.mod h1:hgWBS7lorOAVIJEQMi4Zs
 github.com/grpc-ecosystem/grpc-gateway/v2 v2.10.2/go.mod h1:chrfS3YoLAlKTRE5cFWvCbt8uGAjshktT4PveTUpsFQ=
 github.com/grpc-ecosystem/grpc-opentracing v0.0.0-20180507213350-8e809c8a8645 h1:MJG/KsmcqMwFAkh8mTnAwhyKoB+sTAnY4CACC110tbU=
 github.com/grpc-ecosystem/grpc-opentracing v0.0.0-20180507213350-8e809c8a8645/go.mod h1:6iZfnjpejD4L/4DwD7NryNaJyCQdzwWwH2MWhCA90Kw=
-github.com/gunnerliu/terraform-provider-alicloud v1.217.2 h1:uKx6TyGp7S1Tgc0ouBk9yKqNIv50h+cvn9kbypJXS50=
-github.com/gunnerliu/terraform-provider-alicloud v1.217.2/go.mod h1:dcruDYQyqPTzZ3dkV8Rh2Rrm/J16bF1CKH1LxhSkH5w=
+github.com/gunnerliu/terraform-provider-alicloud v1.217.9 h1:so45xPMUE9SXaThgZP0ELcgv4glFqNz2nqSfdkL14L4=
+github.com/gunnerliu/terraform-provider-alicloud v1.217.9/go.mod h1:dcruDYQyqPTzZ3dkV8Rh2Rrm/J16bF1CKH1LxhSkH5w=
 github.com/hanwen/go-fuse v1.0.0/go.mod h1:unqXarDXqzAk0rt98O2tVndEPIpUgLD9+rwFisZH3Ok=
 github.com/hanwen/go-fuse/v2 v2.1.0/go.mod h1:oRyA5eK+pvJyv5otpO/DgccS8y/RvYMaO00GgRLGryc=
 github.com/hashicorp/consul/api v1.1.0/go.mod h1:VmuI/Lkw1nC05EYQWNKwWGbkg+FbDBtguAZLlVdkD9Q=
